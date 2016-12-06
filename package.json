@@ -1,0 +1,34 @@
+{
+  "name": "simple-ws-pubsub",
+  "version": "0.0.1",
+  "description": "A simple publish-subscribe pattern implementation using websocket protocol.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "files": ["index.js", "client.js", "broker.js", "publisher.js", "subscriber.js", "test"],
+  "scripts": {
+    "test": "node_modules/.bin/tape test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/textality/pubsub.git"
+  },
+  "keywords": [
+    "publish/subscribe",
+    "pubsub",
+    "websocket pubsub"
+  ],
+  "author": "textality",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/textality/pubsub/issues"
+  },
+  "homepage": "https://github.com/textality/pubsub#readme",
+  "devDependencies": {
+    "tape": "^4.6.0"
+  },
+  "dependencies": {
+    "detect-node": "^2.0.3"
+  }
+}
