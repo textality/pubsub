@@ -15,7 +15,7 @@ function clientInit(url) {
     assert.any(assert.str.none, assert.undef, url);
     const Client = require('./client');
     function evHandler(ws, promiseHandler, data, event) {
-        let removeListener = isNode() ? ws.removeListener : ws.removeEventListener; 
+        let removeListener = isNode ? ws.removeListener : ws.removeEventListener; 
         removeListener.call(ws, event, evHandler);
         promiseHandler(data);
     }
@@ -47,7 +47,7 @@ function pub(event, url) {
 function sub(event, url) {
     return pubsub('sub', event, url);
 }
-if (isNode()) {
+if (isNode) {
     const Server =  require('ws').Server;
     WebSocket = require('ws');
     const Broker = require('./broker');
